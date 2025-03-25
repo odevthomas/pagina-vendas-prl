@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 120 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-in-out forwards;
+    opacity: 0;
+  }
+
+  .animate-slideUp {
+    animation: slideUp 1s ease-in-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .animate-expandWidth {
+    animation: expandWidth 1.5s ease-in-out forwards;
+    width: 0;
+  }
+
+  .text-shadow-green {
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+  }
+
+  .text-shadow-sm {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .shadow-text-strong {
+    text-shadow: 0 0 15px rgba(0, 255, 0, 0.5), 0 0 30px rgba(0, 255, 0, 0.3);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandWidth {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
