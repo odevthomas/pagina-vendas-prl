@@ -1,7 +1,6 @@
-<p align="center">
 ![18](https://github.com/user-attachments/assets/6da7e394-b41d-4f39-aad9-5342bc151529)
 
-</p>
+
 
 <h1 align="center">PRL - A Fórmula Secreta para Resultados Extraordinários</h1>
 
