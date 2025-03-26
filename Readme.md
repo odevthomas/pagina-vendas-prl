@@ -22,7 +22,6 @@
   <img src="https://img.shields.io/badge/Version-1.0.0-success" alt="Version"/>
 </p>
 
----
 
 ## ⚙️ Componentes Poderosos
 
