@@ -1,8 +1,6 @@
-Aqui está o `README.md` adaptado com base no modelo que você forneceu e nas informações do PRL que você me pediu:
-
-```markdown
 <p align="center">
-  <img src="/mockup.jpg" alt="PRL - Programação e Resultados de Longo Prazo" width="300" height="300"/>
+![18](https://github.com/user-attachments/assets/6da7e394-b41d-4f39-aad9-5342bc151529)
+
 </p>
 
 <h1 align="center">PRL - A Fórmula Secreta para Resultados Extraordinários</h1>
