@@ -1,19 +1,20 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { ArrowLeft, Check, CreditCard, Lock } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { ArrowLeft, Check, CreditCard, Lock } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function PagamentoPage() {
   return (
     <div className="min-h-screen bg-black text-white">
       <div className="container mx-auto px-4 py-8 max-w-5xl">
+        {/* Voltar para a página principal */}
         <Link href="/" className="inline-flex items-center text-gray-400 hover:text-[#00ff00] mb-6 transition-colors">
           <ArrowLeft className="mr-2 h-4 w-4" />
           Voltar para a página principal
@@ -25,6 +26,7 @@ export default function PagamentoPage() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
+          {/* Formulário de Pagamento */}
           <div className="md:col-span-2">
             <Card className="bg-zinc-900 border-zinc-800 shadow-[0_5px_20px_rgba(0,0,0,0.5)]">
               <CardHeader>
@@ -32,16 +34,19 @@ export default function PagamentoPage() {
                 <CardDescription>Preencha os dados abaixo para finalizar sua compra</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
+                {/* Nome Completo */}
                 <div className="space-y-2">
                   <Label htmlFor="nome">Nome Completo</Label>
                   <Input id="nome" placeholder="Digite seu nome completo" className="bg-zinc-800 border-zinc-700" />
                 </div>
 
+                {/* E-mail */}
                 <div className="space-y-2">
                   <Label htmlFor="email">E-mail</Label>
                   <Input id="email" type="email" placeholder="seu@email.com" className="bg-zinc-800 border-zinc-700" />
                 </div>
 
+                {/* Forma de Pagamento */}
                 <div className="space-y-2">
                   <Label>Forma de Pagamento</Label>
                   <RadioGroup defaultValue="cartao" className="flex flex-col space-y-2">
@@ -64,6 +69,7 @@ export default function PagamentoPage() {
                   </RadioGroup>
                 </div>
 
+                {/* Cartão Número e CVV */}
                 <div className="space-y-2">
                   <Label htmlFor="cartao">Número do Cartão</Label>
                   <Input id="cartao" placeholder="0000 0000 0000 0000" className="bg-zinc-800 border-zinc-700" />
@@ -80,6 +86,7 @@ export default function PagamentoPage() {
                   </div>
                 </div>
 
+                {/* Parcelas */}
                 <div className="space-y-2">
                   <Label htmlFor="parcelas">Parcelas</Label>
                   <Select>
@@ -105,6 +112,7 @@ export default function PagamentoPage() {
             </Card>
           </div>
 
+          {/* Resumo do Pedido */}
           <div>
             <Card className="bg-zinc-900 border-zinc-800 shadow-[0_5px_20px_rgba(0,0,0,0.5)]">
               <CardHeader>
@@ -169,30 +177,24 @@ export default function PagamentoPage() {
               </CardContent>
             </Card>
 
-            <div className="mt-4 flex items-center justify-center text-center">
-              <div className="flex items-center text-gray-400 text-sm">
-                <Lock className="h-4 w-4 mr-2" />
-                <span>Pagamento 100% seguro e criptografado</span>
-              </div>
-            </div>
-
+            {/* Métodos de Pagamento */}
             <div className="mt-4 flex justify-center space-x-2">
               <Image
-                src="/placeholder.svg?height=30&width=40"
+                src="/Pagaento/mastercard.svg?height=30&width=40"
                 width={40}
                 height={30}
                 alt="Visa"
                 className="opacity-70"
               />
               <Image
-                src="/placeholder.svg?height=30&width=40"
+                src="/Pagaento/pix.svg?height=30&width=40"
                 width={40}
                 height={30}
                 alt="Mastercard"
                 className="opacity-70"
               />
               <Image
-                src="/placeholder.svg?height=30&width=40"
+                src="/Pagaento/visaelectron.svg?height=30&width=40"
                 width={40}
                 height={30}
                 alt="Pix"
@@ -203,6 +205,5 @@ export default function PagamentoPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-
